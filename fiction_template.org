@@ -1,0 +1,70 @@
+#+TITLE: Story Title
+#+AUTHOR: Jeff Stautz
+#+OPTIONS: toc:nil ':t *:t author:t <:nil num:nil tasks:nil tags:nil title:nil date:nil
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [article,letterpaper,12pt]
+#+LaTeX_HEADER: \usepackage[letterpaper, hmargin=1in, vmargin=1in]{geometry}
+#+LaTeX_HEADER: \usepackage{setspace, fancyhdr, lettrine, outlines, times, url, everysel, footmisc, ragged2e, titling, indentfirst}
+#+LaTeX_HEADER: \usepackage[inline]{enumitem}
+#+LaTeX_HEADER: \pagestyle{fancy}
+#+LaTeX_HEADER: \lhead{}
+#+LaTeX_HEADER: \chead{}
+#+LaTeX_HEADER: \rhead{Stautz / Story Title / \thepage}
+#+LaTeX_HEADER: \lfoot{}
+#+LaTeX_HEADER: \cfoot{}
+#+LaTeX_HEADER: \rfoot{}
+#+LaTeX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
+#+LaTeX_HEADER: \renewcommand{\footrulewidth}{0pt}
+#+LaTeX_HEADER: \headheight = 15pt
+#+LaTeX_HEADER: \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+#+LaTeX_HEADER: \renewcommand\maketitle{}
+
+\noindent\makebox[\textwidth]{Jeff Stautz \hfill about x,000 words}
+\noindent\makebox[\textwidth]{Address Line 1\hfill}
+\noindent\makebox[\textwidth]{City, Province, Postal\hfill}
+\noindent\makebox[\textwidth]{Canada\hfill}
+\noindent\makebox[\textwidth]{Phone\hfill}
+\noindent\makebox[\textwidth]{Email\hfill}
+\begin{center}
+\thispagestyle{empty}
+\vspace*{4cm}
+\textbf{Story Title}
+\vspace{-2cm}
+\end{center}
+\begin{doublespace}
+\begin{raggedright}
+\parindent = 2em
+
+* 
+
+This is an Emacs org-mode file meant for writing fiction and formatting it for submission to literary magazines, publishers, and agents. 
+
+Replace the author info, contact info, and story title above. Also remember to update the "about x,000 words" with your word count.
+
+The text of your story goes here, in this section of the doc.
+
+Leave the org-mode headline (the line with the *, above) blank. 
+
+When writing, =narrow-to-region= within this headline and go to town.
+
+When you want to export, hit =C-c C-e=, choose =l= for LaTeX, then pick an appropriate export format.
+
+The headers and front-matter above should generate a document in standard fiction manuscript format -- double-spaced, Times 12, ragged right margins, appropriate headers, contact info on first page.
+
+Leave the following two lines of LaTeX in place to close out the double-space / ragged right section.
+
+\end{raggedright}
+\end{doublespace}
+
+* Notes                                                                         :noexport:
+
+This subtree is for your notes on the story, including raw journal entries.
+
+None of this will get exported to your manuscript when you call =org-export=. So add all the notes and reference material you want down here!
+
+** Characters
+** Situation
+** Setting
+** Themes / Threads
+** Outline
+** Journal entries
