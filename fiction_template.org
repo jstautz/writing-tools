@@ -5,6 +5,7 @@
 #+LaTeX_CLASS_OPTIONS: [article,letterpaper,12pt]
 #+LaTeX_HEADER: \usepackage[letterpaper, hmargin=1in, vmargin=1in]{geometry}
 #+LaTeX_HEADER: \usepackage{setspace, fancyhdr, lettrine, outlines, times, url, everysel, footmisc, ragged2e, titling, indentfirst}
+#+LaTeX_HEADER: \usepackage[explicit]{titlesec}
 #+LaTeX_HEADER: \usepackage[inline]{enumitem}
 #+LaTeX_HEADER: \pagestyle{fancy}
 #+LaTeX_HEADER: \lhead{}
@@ -17,7 +18,15 @@
 #+LaTeX_HEADER: \renewcommand{\footrulewidth}{0pt}
 #+LaTeX_HEADER: \headheight = 15pt
 #+LaTeX_HEADER: \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
-#+LaTeX_HEADER: \renewcommand\maketitle{}
+#+LaTeX_HEADER: \renewcommand{\sectbreak}{\vspace{16pt} \begin{center} * * * \end{center} \vspace{16pt}}
+#+LaTeX_HEADER: \makeatletter
+#+LaTeX_HEADER: \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+#+LaTeX_HEADER: \makeatother
+#+LaTeX_HEADER: \titlespacing{\section}{\parindent}{0pt}{0pt}
+
+* LaTeX Front Matter (Title, Contact Info, Word Count)
+
+# Modify the title, contact info + word count, but nothing else
 
 \noindent\makebox[\textwidth]{Jeff Stautz \hfill about x,000 words}
 \noindent\makebox[\textwidth]{Address Line 1\hfill}
@@ -29,29 +38,38 @@
 \thispagestyle{empty}
 \vspace*{4cm}
 \textbf{Story Title}
-\vspace{-2cm}
 \end{center}
 \begin{doublespace}
 \begin{raggedright}
 \parindent = 2em
 
-* 
+* Manuscript goes here: section one
 
 This is an Emacs org-mode file meant for writing fiction and formatting it for submission to literary magazines, publishers, and agents. 
 
-Replace the author info, contact info, and story title above. Also remember to update the "about x,000 words" with your word count.
+Replace the author info, contact info, and story title above---both in the =LaTeX_HEADER= lines at the top of the document as well as in the "LaTeX Front Matter" section above. Also remember to update the "about x,000 words" with your word count.
 
 The text of your story goes here, in this section of the doc.
 
-Leave the org-mode headline (the line with the *, above) blank. 
+Additional scenes/segments can be added under separate headers, as below.
 
-When writing, =narrow-to-region= within this headline and go to town.
+Section breaks can be inserted with =\sectbreak= like so:
+
+\sectbreak
+
+* Manuscript goes here: section two
+
+Thanks to the =titlesec= package and the =\titleformat= settings above, no org-mode headline titles will appear in the manuscript---add as many sections as you want, and label/title them as you wish.
+
+When writing, =narrow-to-region= within these headlines to focus on a section at a time.
 
 When you want to export, hit =C-c C-e=, choose =l= for LaTeX, then pick an appropriate export format.
 
-The headers and front-matter above should generate a document in standard fiction manuscript format -- double-spaced, Times 12, ragged right margins, appropriate headers, contact info on first page.
+The headers and front-matter above should generate a document in standard fiction manuscript format---double-spaced, Times 12, ragged right margins, appropriate headers, contact info on first page.
 
-Leave the following two lines of LaTeX in place to close out the double-space / ragged right section.
+Leave the following section---containing two lines of LaTeX---in place to close out the double-space / ragged right section.
+
+* End Manuscript
 
 \end{raggedright}
 \end{doublespace}
@@ -60,7 +78,7 @@ Leave the following two lines of LaTeX in place to close out the double-space / 
 
 This subtree is for your notes on the story, including raw journal entries.
 
-None of this will get exported to your manuscript when you call =org-export=. So add all the notes and reference material you want down here!
+None of this will get exported to your manuscript when you call =org-export=. So add all the notes and reference material you want down here.
 
 ** Characters
 ** Situation
