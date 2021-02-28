@@ -19,6 +19,7 @@
 #+LaTeX_HEADER: \headheight = 15pt
 #+LaTeX_HEADER: \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
 #+LaTeX_HEADER: \newcommand{\sectbreak}{\vspace{16pt} \begin{center} * * * \end{center} \vspace{16pt}}
+#+LaTeX_HEADER: \newcommand{\closingbreak}{\vspace{16pt} \begin{center} \# \end{center} \vspace{16pt}}
 #+LaTeX_HEADER: \makeatletter
 #+LaTeX_HEADER: \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
 #+LaTeX_HEADER: \makeatother
@@ -53,7 +54,7 @@ The text of your story goes here, in this section of the doc.
 
 Additional scenes/segments can be added under separate headers, as below.
 
-Section breaks can be inserted with =\sectbreak= like so:
+Use =\vspace{16pt}= to insert a couple of blank lines between sections. Or, if you want, more explicit section breaks with ***s can be inserted with =\sectbreak= like so:
 
 \sectbreak
 
@@ -70,6 +71,11 @@ The headers and front-matter above should generate a document in standard fictio
 Leave the following section---containing two lines of LaTeX---in place to close out the double-space / ragged right section.
 
 * End Manuscript
+
+# Do not mofity this section!
+
+\vspace*{-16pt}
+\closingbreak
 
 \end{raggedright}
 \end{doublespace}
