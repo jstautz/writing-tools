@@ -1,0 +1,9 @@
+#+LaTeX_CLASS: article
+#+LaTeX_CLASS_OPTIONS: [letterpaper,12pt]
+#+LaTeX_HEADER: \usepackage[letterpaper, hmargin=1in, vmargin=1in]{geometry}
+#+LaTeX_HEADER: \usepackage{setspace, fancyhdr, lettrine, outlines, times, url, everysel, footmisc, ragged2e, titling, indentfirst}
+#+LaTeX_HEADER: \usepackage[explicit]{titlesec}
+#+LaTeX_HEADER: \usepackage[inline]{enumitem}
+#+LaTeX_HEADER: \pagestyle{fancy}
+#+LaTeX_HEADER: \lhead{}
+#+LaTeX_HEADER: \chead{}

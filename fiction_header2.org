@@ -1,0 +1,14 @@
+#+LaTeX_HEADER: \lfoot{}
+#+LaTeX_HEADER: \cfoot{}
+#+LaTeX_HEADER: \rfoot{}
+#+LaTeX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
+#+LaTeX_HEADER: \renewcommand{\footrulewidth}{0pt}
+#+LaTeX_HEADER: \headheight = 15pt
+#+LaTeX_HEADER: \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
+#+LaTeX_HEADER: \newcommand{\sectbreak}{\vspace{16pt} \begin{center} * * * \end{center} \vspace{16pt}}
+#+LaTeX_HEADER: \newcommand{\closingbreak}{\vspace{16pt} \begin{center} \# \end{center} \vspace{16pt}}
+#+LaTeX_HEADER: \makeatletter
+#+LaTeX_HEADER: \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
+#+LaTeX_HEADER: \makeatother
+#+LaTeX_HEADER: \titlespacing{\section}{\parindent}{0pt}{0pt}
+

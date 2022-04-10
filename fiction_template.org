@@ -1,29 +1,9 @@
 #+TITLE: Story Title
 #+AUTHOR: Jeff Stautz
 #+OPTIONS: toc:nil ':t *:t author:t <:nil num:nil tasks:nil tags:nil title:nil date:nil
-#+LaTeX_CLASS: article
-#+LaTeX_CLASS_OPTIONS: [article,letterpaper,12pt]
-#+LaTeX_HEADER: \usepackage[letterpaper, hmargin=1in, vmargin=1in]{geometry}
-#+LaTeX_HEADER: \usepackage{setspace, fancyhdr, lettrine, outlines, times, url, everysel, footmisc, ragged2e, titling, indentfirst}
-#+LaTeX_HEADER: \usepackage[explicit]{titlesec}
-#+LaTeX_HEADER: \usepackage[inline]{enumitem}
-#+LaTeX_HEADER: \pagestyle{fancy}
-#+LaTeX_HEADER: \lhead{}
-#+LaTeX_HEADER: \chead{}
-#+LaTeX_HEADER: \rhead{Stautz / Story Title / \thepage}
-#+LaTeX_HEADER: \lfoot{}
-#+LaTeX_HEADER: \cfoot{}
-#+LaTeX_HEADER: \rfoot{}
-#+LaTeX_HEADER: \renewcommand{\headrulewidth}{0.4pt}
-#+LaTeX_HEADER: \renewcommand{\footrulewidth}{0pt}
-#+LaTeX_HEADER: \headheight = 15pt
-#+LaTeX_HEADER: \newcommand{\superscript}[1]{\ensuremath{^{\textrm{#1}}}}\newcommand{\subscript}[1]{\ensuremath{_{\textrm{#1}}}}
-#+LaTeX_HEADER: \newcommand{\sectbreak}{\vspace{16pt} \begin{center} * * * \end{center} \vspace{16pt}}
-#+LaTeX_HEADER: \newcommand{\closingbreak}{\vspace{16pt} \begin{center} \# \end{center} \vspace{16pt}}
-#+LaTeX_HEADER: \makeatletter
-#+LaTeX_HEADER: \titleformat{\section}[runin]{}{}{0pt}{\@gobble}
-#+LaTeX_HEADER: \makeatother
-#+LaTeX_HEADER: \titlespacing{\section}{\parindent}{0pt}{0pt}
+#+INCLUDE: ./fiction_header1.org
+#+LaTeX_HEADER: \rhead{Stautz / *Story Title* / \thepage}
+#+INCLUDE: ./fiction_header2.org
 
 * LaTeX Front Matter (Title, Contact Info, Word Count)
 
