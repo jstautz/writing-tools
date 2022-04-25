@@ -66,6 +66,31 @@ This subtree is for your notes on the story, including raw journal entries.
 
 None of this will get exported to your manuscript when you call =org-export=. So add all the notes and reference material you want down here.
 
+** To count words                                                              :noexport:
+
+~/bin/texcount.pl -0 -sum=1 ~/path/to/tex_output_file.tex
+** To export to Word .docx:                                                    :noexport:
+
+> brew install pandoc # if you don't already have it
+> pandoc filename.tex -o filename.docx
+
+(assuming using my org-mode LaTeX export template:)
+
+Open it in Pages or Word and modify spacing, indentation, remove spacing before/after paragraphs, and re-create the headers.
+
+Remember to center your * * * \sectbreak indicators.
+** To export notes:                                                            :noexport:
+
+- Add to top of header:
+  #+BEGIN_EXAMPLE
+  #+LaTeX_HEADER: \usepackage{pdfpages}
+  #+END_EXAMPLE
+- remove :noexport: tag from Notes header
+- For any PDFs to include in notes, use latex command like
+  #+BEGIN_EXAMPLE
+  \includepdf[pages=-]{notes/journal 2020-05-15.pdf}
+  #+END_EXAMPLE
+
 ** Characters
 ** Situation
 ** Setting
