@@ -52,7 +52,7 @@ Leave the following section---containing two lines of LaTeX---in place to close 
 
 * End Manuscript
 
-# Do not mofity this section!
+# Do not modify this section!
 
 \vspace*{-16pt}
 \closingbreak
